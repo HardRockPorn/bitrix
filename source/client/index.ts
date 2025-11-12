@@ -40,9 +40,9 @@ export default (restURI: string, accessToken?: string, options?: ExtendOptions) 
     queue.add(() => client.get(...args))
 
   // @ts-expect-error @todo remove after issue is resolved (https://github.com/sindresorhus/got/issues/954)
-  const call = Call({ get: queuedGet })
+  const call = Call({ get: client.get })
   // @ts-expect-error @todo remove after issue is resolved (https://github.com/sindresorhus/got/issues/954)
-  const batch = Batch({ get: queuedGet })
+  const batch = Batch({ get: client.get })
   const list = List({ call, batch })
 
   return {
