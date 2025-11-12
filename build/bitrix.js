@@ -1,10 +1,10 @@
-import Client from "./client";
-import CompaniesService from "./services/companies";
-import ContactsService from "./services/contacts";
-import DealsService from "./services/deals";
-import LeadsService from "./services/leads";
-import StatusesService from "./services/statuses";
-import UsersService from "./services/users";
+import Client from "./client/index.js";
+import CompaniesService from "./services/companies/index.js";
+import ContactsService from "./services/contacts/index.js";
+import DealsService from "./services/deals/index.js";
+import LeadsService from "./services/leads/index.js";
+import StatusesService from "./services/statuses/index.js";
+import UsersService from "./services/users/index.js";
 /**
  * Construct a Bitrix client with generic methods
  * @param restURI REST endpoint, like a `https://hello.bitrix24.ua/rest` or an inbound webhook endpoint,
